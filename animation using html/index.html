@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <h2><img src="./image/logo.png" alt=""></h2>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">servises</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="navbutton">get started <img src="./image/arrow-white.png" alt=""></div>
+        <span class="menu"><img src="./image/menu.png" alt=""></span>
+    </nav>
+
+    <section>
+        <h2>welcome to <span>India</span></h2>
+        <div class="container">
+            <div class="left">
+                <h3>hello</h3>
+                <h3>friends</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab nulla laboriosam ratione expedita non, voluptatibus impedit veniam autem officiis sed eum, quae vel! Est exercitationem soluta eos labore qui accusantium.</p>
+                <div class="buttons">
+                    <button class="learn">learn more<img src="./image/phone.png"></button>
+                    <button class="btn2 learn">learn more <img src="./image/arrow-black.png"></button>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./image/user.png" alt="">
+            </div>
+        </div> 
+    </section>
+
+    <script>
+        
+        let Nav = document.querySelector("nav ul")
+        let Menu = document.querySelector(".menu")
+
+        Menu.addEventListener("click",function () {
+            Nav.style.display = "block"
+        })
+
+    </script>
+
+</body>
+</html>

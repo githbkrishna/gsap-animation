@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            height: 500vh;
+            overflow: visible;
+
+            view-timeline-name: --section-pin-tl;
+            view-timeline-axis: block;
+
+            background-color: black;
+            color: white;
+        }
+        .sticky{
+            position: sticky;
+            top: 0;
+
+            height: 100vh;
+            width: 100vw;
+            overflow-x: clip;
+        }
+        @keyframes move {
+            to{
+                transform: translateX(calc(-100% + 100vw));
+            }
+        }
+        .horizontal-strip{
+            height: 100vh;
+            width: 250vmax;
+            font-size: 10rem;
+
+            animation: move linear forwards;
+            animation-timeline: --section-pin-tl;
+            animation-range: contain 0% contain 100%;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrapper">
+        <div class="sticky">
+            <div class="horizontal-strip"> horizontal-strip</div>
+        </div>
+    </section>
+</body>
+</html>

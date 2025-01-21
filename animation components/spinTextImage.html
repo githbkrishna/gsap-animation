@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html , body{
+            height: 100%;
+            width: 100%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2vw;
+            background-color: #000;
+            color: #fff;
+            padding: 0 5vw;
+        }
+        .container{
+            width: 100%;
+            height: 80px;
+            font-size: 4vw;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            /* border: 2px solid red; */
+            transition: all 4.5s ease;
+            cursor: pointer;
+        }
+        .container img{
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+            transform: translateY(10%), rotateY(10deg);
+            transition: all 0.5s ease-out;
+        }
+        .container img:nth-child(1){
+            position: absolute;
+            top: 15%;
+            left: 10%;
+        }
+        .container img:nth-child(3){
+            height: 300px;
+            position: absolute;
+            bottom: 15%;
+            right: 10%;
+        }
+        .contain{
+            overflow: hidden;
+        }
+        .contain h2{
+            text-transform: capitalize;
+            transition: all 0.5s ease;
+        }
+        .container:hover img{
+            opacity: 1;
+            transform: translateY(0) rotateY(0);
+        }
+        .container:hover h2{
+            color: pink;
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <img src="./face.jpg" alt="">
+            <div class="contain">
+                <h2>Strategy</h2>
+                <h2>Strategy</h2>
+            </div>
+            <img src="./art.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <img src="./palne.jpg" alt="">
+            <div class="contain">
+                <h2>brand</h2>
+                <h2>brand</h2>
+            </div>
+            <img src="./wall.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <img src="./rose.jpg" alt="">
+            <div class="contain">
+                <h2>grow</h2>
+                <h2>grow</h2>
+            </div>
+            <img src="./women.jpg" alt="">
+        </div>
+
+    </section>
+</body>
+</html>

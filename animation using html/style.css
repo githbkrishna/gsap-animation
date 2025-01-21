@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to left, rgb(170, 214, 9), rgb(30, 235, 57));
+    overflow: hidden;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    animation: move 0.5s ease;
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+        scale: 0.5;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+nav .logo{
+    margin-left: 20px;
+    color: blue;
+}
+
+nav .logo h2{
+    animation: move 0.5s linear;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 20px;
+    animation: move 0.5s ease;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+}
+
+nav ul li a:hover{
+    color: rgb(98, 98, 235);
+}
+
+nav .logo img{
+    height: 1.5rem;
+}
+nav li img{
+    height: 1rem;
+}
+
+.navbutton{
+    padding: 10px;
+    border-radius: 4rem;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.menu{
+    width: 2vw;
+    display: none;
+}
+
+.menu img{
+    width: 100%;
+    height: 100%;
+}
+
+/* nav ends */
+
+section{
+    border-top: 2px solid black;
+}
+section h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4vw;
+    margin: 1.65vw 0;
+    animation: slide 1s ease-out;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.container{
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left, .right{
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    padding: 20px;
+    padding-top: 5rem;
+    padding-left: 8vw;
+}
+
+.left h3 , .left p{
+    margin-bottom: 20px;
+    animation: slide1 1s ease-out;
+}
+
+.left h3{
+    animation-delay: 0.2s;
+}
+
+.left p{
+    animation-delay: 0.5s;
+
+}
+
+@keyframes slide1 {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    70%{
+        opacity: 0.3;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.left h3{
+    font-size: 5vw;
+    text-transform: uppercase;
+}
+
+.left .buttons{
+    cursor: pointer;
+    color: white;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.learn{
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5vw;
+    padding: 5px 10px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    animation: slide2 1s ease-out;
+
+}
+
+.btn2{
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: black;
+}
+
+.btn2 img{
+    background-color: transparent;
+    border: none;
+}
+
+
+
+@keyframes slide2 {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    70%{
+        opacity: 0.3;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.learn{
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.button .btn2{
+    text-decoration: underline;
+    background: none;
+    color: black;
+    border: none;
+}
+
+.button .btn2 img{
+    background: none;
+    border: none;
+    margin: 0;
+}
+
+.left img{
+    height: 1rem;
+    background-color: white;
+    padding: 5px;
+    height: 2vw;
+    text-align: center;
+    border-radius: 2rem;
+    margin-left: 10px;
+}
+
+.right img{
+    width: 100%;
+    height: 100%;
+    animation: imagix 1s ease-out;
+}
+
+@keyframes imagix {
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+
+
+@media (max-width:676px) {
+    nav .navbutton{
+        display: none;
+    }
+}
+
+@media (max-width:531px) {
+    nav{
+        width: 100%;
+    }
+    nav ul{
+        display: none;
+    }
+    nav .menu{
+        display: block;
+        width:2.5vw;
+    }
+}
